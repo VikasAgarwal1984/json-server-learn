@@ -1,11 +1,11 @@
 {
   "name": "@vikas/json-server-learn",
   "version": "0.0.1",
-  "description": "",
+  "description": "json server for all client projects",
   "main": "index.js",
   "scripts": {
     "view-students": "node src/mocks/students",
-    "start": "node src/server.js"
+    "start": "node src/start-server.js"
   },
   "author": "",
   "license": "ISC",
