@@ -1,0 +1,16 @@
+{
+  "name": "@vikas/json-server-learn",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "view-students": "node src/mocks/students",
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0",
+    "@faker-js/faker": "^6.0.0-alpha.6"
+  }
+}
