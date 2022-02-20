@@ -1,15 +1,21 @@
 {
   "name": "@vikas/json-server-learn",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "json server for all client projects",
   "main": "index.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "view-students": "node src/mocks/students",
     "prestart": "npm run build",
     "start": "node dist/runner",
     "clean": "del-cli dist",
     "prebuild": "npm run clean",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "author": "",
   "license": "ISC",
