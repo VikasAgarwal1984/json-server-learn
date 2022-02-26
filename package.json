@@ -1,6 +1,6 @@
 {
   "name": "@vikas/json-server-learn",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "json server for all client projects",
   "main": "dist/bundle.js",
   "type": "module",
