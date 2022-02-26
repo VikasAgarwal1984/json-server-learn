@@ -7,7 +7,7 @@ export class StudentMockDataGenerator {
       const randomCard = faker.helpers.createCard();
       const { website, company, accountHistory, posts, ...card } = randomCard;
 
-      students.push(randomCard);
+      students.push(card);
       count--;
     }
     return students;

@@ -1,11 +1,24 @@
-import * as jsonServer from "json-server";
+import jsonServer from "json-server";
 import { Routes } from "./routes";
 
+export class RouteType {
+  relativeUrl!: string;
+  data: any;
+}
 export class Server {
-  start() {
+  #routes: any = {};
+  addNewRoutes(route: RouteType) {
+    this.#routes[route.relativeUrl] = route.data;
+  }
+
+  #getRoutes() {
     const routes = new Routes().getRoutes();
+    return {...routes, ...this.#routes};
+  }
+
+  start() {
     const server = jsonServer.create();
-    const router = jsonServer.router(routes);
+    const router = jsonServer.router(this.#getRoutes());
     const middlewares = jsonServer.defaults();
     // Set default middlewares (logger, static, cors and no-cache)
     server.use(middlewares);
